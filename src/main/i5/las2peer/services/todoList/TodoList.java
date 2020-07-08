@@ -122,7 +122,8 @@ public class TodoList extends RESTService {
       s.setString(1, (String) payload_JSON.get("item")); 
  
       s.executeUpdate(); 
-      s.close();
+      s.close(); 
+      return Response.status(HttpURLConnection.HTTP_OK).entity(result.toJSONString()).build();
     } catch (SQLException e) { 
       return Response.status(500).entity("SQLException: " + e.getMessage()).build();
     }
