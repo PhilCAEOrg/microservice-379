@@ -127,10 +127,7 @@ public class TodoList extends RESTService {
     } catch (SQLException e) { 
       return Response.status(500).entity("SQLException: " + e.getMessage()).build();
     }
-    // response
-    boolean response_condition = true;
-    if(response_condition) {
-      JSONObject result = new JSONObject();
+    
 
       
 
