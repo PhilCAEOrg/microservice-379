@@ -123,7 +123,7 @@ public class TodoList extends RESTService {
  
       s.executeUpdate(); 
       s.close(); 
-      return Response.status(HttpURLConnection.HTTP_OK).entity(result.toJSONString()).build();
+      return Response.status(HttpURLConnection.HTTP_OK).entity(payload_JSON.toJSONString()).build();
     } catch (SQLException e) { 
       return Response.status(500).entity("SQLException: " + e.getMessage()).build();
     }
