@@ -119,7 +119,10 @@ public class TodoList extends RESTService {
       Connection c = dbm.getConnection(); 
  
       PreparedStatement s = c.prepareStatement("INSERT INTO tab (item) VALUES (?);"); 
-      s.setString(1, payload_JSON.get()
+      s.setString(1, (String) payload_JSON.get("item")); 
+ 
+      s.executeUpdate(); 
+      s.close();
     } catch (SQLException e) { 
       return Response.status(500).entity("SQLException: " + e.getMessage()).build();
     }
