@@ -155,7 +155,9 @@ public class TodoList extends RESTService {
     try { 
       Connection c = dbm.getConnection(); 
       PreparedStatement s = c.prepareStatement("SELECT * FROM tab;"); 
-      s.executeQuery();
+      ResultSet queryResult = s.executeQuery(); 
+ 
+      while(queryResult.hasNext)
     } catch (SQLException e) { 
       return Response.status(500).entity("SQLException: " + e.getMessage()).build();
     }
