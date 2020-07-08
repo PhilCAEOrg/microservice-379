@@ -155,23 +155,7 @@ public class TodoList extends RESTService {
 
 
      
-    // service method invocations
-
-     
-
-
-
-
-    // response
-    boolean response_condition = true;
-    if(response_condition) {
-      JSONObject result = new JSONObject();
-
-      
-
-      return Response.status(HttpURLConnection.HTTP_OK).entity(result.toJSONString()).build();
-    }
-    return null;
+    
   }
 
 
